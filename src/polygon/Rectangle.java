@@ -4,11 +4,11 @@ public class Rectangle extends Polygon {
 
 	enum QuadType {SQUARE, RECTANGLE}
 
-	public Rectangle(int left, int top, int xLength, int yLength) {
+	public Rectangle(int left, int top, int width, int height) {
 		addPoint(left , top);
-        addPoint(left + xLength , top);
-        addPoint(left + xLength, top + yLength);
-        addPoint(left , top + yLength);
+		addPoint(left + width , top);
+		addPoint(left + width, top + height);
+		addPoint(left , top + height);
 	}
 
 	public double area() {
