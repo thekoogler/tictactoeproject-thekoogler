@@ -2,6 +2,11 @@ package tictactoe;
 
 import polygon.LineList;
 
+
+/**
+ * class BoardView has code for the playing board
+ */
+
 class BoardView extends LineList {
 
     private static final int CELL_SIDE = 130;
@@ -11,6 +16,11 @@ class BoardView extends LineList {
     private int rows;
     private int columns;
     private WinLine winLine;
+
+
+    /**
+     * constructor for the BoardView Class
+     */
 
     BoardView(int rows, int columns) {
         setWithVertices(false);
@@ -34,6 +44,10 @@ class BoardView extends LineList {
         }
     }
 
+    /**
+     * displayMarker is used for marking a square
+     */
+
     Marker displayMarker(Cell cell) {
         //assert no mark in specified location
         //assert row and column valid
@@ -41,7 +55,6 @@ class BoardView extends LineList {
                 MARGIN + cell.getColumn() * CELL_SIDE + PADDING,
                 MARGIN + cell.getRow() * CELL_SIDE + PADDING);
     }
-
 
     /**
      * Draw a line including margin between cells
