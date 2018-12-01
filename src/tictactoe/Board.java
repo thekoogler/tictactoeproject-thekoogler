@@ -2,6 +2,10 @@ package tictactoe;
 
 import java.util.ArrayList;
 
+/**
+ * board class has code for the playing board
+ */
+
 public class Board {
 
     private static final int DEFAULT_ROWS = 3;
@@ -16,7 +20,12 @@ public class Board {
     private ArrayList<Sequence> sequences;
     private Sequence winningSequence;
 
-    public Board() {
+
+/**
+ * gives variables to sets rows, columns, cells & sequences
+ */
+
+ public Board() {
         rows = DEFAULT_ROWS;
         columns = DEFAULT_COLUMNS;
         inRowToWin = DEFAULT_IN_ROW_TO_WIN;
@@ -55,6 +64,10 @@ public class Board {
         }
     }
 
+    /**
+     * playmarker identifies if a place is filled
+     */
+
     public boolean playMarker(MarkerType type, int row, int column) {
         if (row < 0 || row >= rows || column < 0 || column >= columns) {
             return false;
@@ -65,6 +78,10 @@ public class Board {
         cells[row][column].setType(type);
         return true;
     }
+
+    /**
+     * haswinner checks if there has been three and a row
+     */
 
     public boolean hasWinner() {
         //return immediately if already known
@@ -81,6 +98,10 @@ public class Board {
         return false;
     }
 
+    /**
+     * reset returns null if there is no winning sequence
+     */
+
     public void reset() {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns;  j++) {
@@ -90,6 +111,9 @@ public class Board {
         winningSequence = null;
         view.resetWinner();
     }
+    /**
+     * hasNextPlay checks if there are available spaces to have a next round of player input
+     */
 
     public boolean hasNextPlay() {
         if (hasWinner()) {
@@ -106,21 +130,41 @@ public class Board {
         return false;
     }
 
+    /**
+     * returns inRowToWin
+     */
+
     public int getInRowToWin() {
         return inRowToWin;
     }
+
+    /**
+     * returns cells
+     */
 
     public Cell[][] getCells() {
         return cells;
     }
 
+    /**
+     * returns sequences
+     */
+
     public ArrayList<Sequence> getSequences() {
         return sequences;
     }
 
+    /**
+     * returns rows
+     */
+
     public int getNumberRows() {
         return rows;
     }
+
+    /**
+     * returns columns
+     */
 
     public int getNumberColumns() {
         return columns;

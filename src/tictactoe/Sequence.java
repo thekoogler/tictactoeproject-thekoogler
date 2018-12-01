@@ -1,5 +1,8 @@
 package tictactoe;
 
+/**
+ * class Sequence contains sequencing code
+ */
 
 public class Sequence {
 
@@ -14,6 +17,11 @@ public class Sequence {
         this.endRow = endRow;
         this.endColumn = endColumn;
     }
+
+    /**
+     * Sequence getWinner checks if any winning lines have occurred
+     */
+
 
     Sequence getWinner(Cell[][] cells, int inRowToWin) {
         SequenceIterator iter = new SequenceIterator(this, cells);

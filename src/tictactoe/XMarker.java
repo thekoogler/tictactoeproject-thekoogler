@@ -2,6 +2,10 @@ package tictactoe;
 
 import polygon.LineList;
 
+/**
+ * code for marking squares
+ */
+
 public class XMarker extends LineList implements Marker {
 
     XMarker(int size, int left, int top) {

@@ -2,6 +2,11 @@ package tictactoe;
 
 import java.util.ArrayList;
 
+
+/**
+ * Player class contains code for creating a player
+ */
+
 abstract public class Player {
 
     private static ArrayList<Player> players = new ArrayList<>();

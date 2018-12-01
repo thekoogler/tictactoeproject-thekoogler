@@ -2,6 +2,11 @@ package tictactoe;
 
 import polygon.Polygon;
 
+
+/**
+ * the OMarker class contains code regarding the number of vertices
+ */
+
 public class OMarker extends Polygon implements Marker {
 
     static private final int NUMBER_VERTICES = 24;
@@ -18,6 +23,11 @@ public class OMarker extends Polygon implements Marker {
                             radius * Math.sin(2 * Math.PI * i / NUMBER_VERTICES)));
         }
     }
+
+
+    /**
+     * deletes
+     */
 
     public void delete() {
         removeAll();

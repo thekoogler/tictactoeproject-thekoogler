@@ -6,6 +6,10 @@ import tictactoe.Sequence;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * class SequenceIterator contains sequencing code
+ */
+
 public class SequenceIterator implements Iterator<Cell> {
 
     private Cell[][] cells;

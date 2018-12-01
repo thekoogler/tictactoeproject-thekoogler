@@ -1,3 +1,4 @@
+import bailey.ComputerPlayer;
 import human.HumanPlayer;
 import tictactoe.Board;
 import tictactoe.Location;
@@ -17,6 +18,7 @@ public class TicTacToeMain {
         new HumanPlayer("Doug");
         new HumanPlayer("Prateek");
         new HumanPlayer("Other");
+        new ComputerPlayer("containsNoSugar");
         ArrayList<Player> playerList = Player.getPlayers();
 
         System.out.println("Welcome to Tic Tac Toe");
